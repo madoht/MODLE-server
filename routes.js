@@ -9,7 +9,7 @@ const USER = "/user";
 const USER_DETAIL = "/:id";
 
 //Search Result
-const SEARCH_RESULT = "/result";
+const SEARCH = "/search";
 const SEARCH_DETAIL = "/:id";
 
 const routes = {
@@ -19,7 +19,7 @@ const routes = {
   logout: LOGOUT,
   user: USER,
   userDetail: USER_DETAIL,
-  searchResult: SEARCH_RESULT,
+  search: SEARCH,
   searchDetail: SEARCH_DETAIL,
 };
 

@@ -5,7 +5,6 @@ import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
 import globalRouter from "./routers/globalRouter";
 import userRouter from "./routers/userRouter";
-import resultRouter from "./routers/searchRouter";
 import routes from "./routes";
 import { localMiddleware } from "./middleware";
 
@@ -21,6 +20,5 @@ app.use(localMiddleware);
 
 app.use(routes.home, globalRouter);
 // app.use(routes.user, userRouter);
-// app.use(routes.search, resultRouter);
 
 export default app;

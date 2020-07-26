@@ -4,7 +4,7 @@ block content
     .searchbox
         .searchbox-text 
             .searchbox-container
-                input(type="text", class="searchbox", placeholder="지하철역, 도로명 주소등 키워드를 입력하십시오", name="search")
+                form(action=routes.search, method="get")
+                    input(type="text", class="searchbox", placeholder="지하철역, 도로명 주소등 키워드를 입력하십시오", name="term")
         .searchbox-btn
-            //-  a(href=``)
-            button 검색
+             button 검색
