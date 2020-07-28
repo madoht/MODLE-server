@@ -2,4 +2,9 @@ extends layouts/main
 
 block content
     .search_header
-        h3 #{searchingBy}에 따른 검색 결과
+        h3 #{searchingBy} 관련 검색 결과
+    .search_results
+        each house in home
+            .search_result
+                h2= house.name
+                p= house.place

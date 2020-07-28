@@ -19,6 +19,6 @@ app.use(morgan("dev"));
 app.use(localMiddleware);
 
 app.use(routes.home, globalRouter);
-// app.use(routes.user, userRouter);
+app.use(routes.user, userRouter);
 
 export default app;
