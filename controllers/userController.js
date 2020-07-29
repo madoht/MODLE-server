@@ -5,7 +5,7 @@ export const user = (req, res) => {
 };
 
 export const userDetail = (req, res) => {
-  res.render("userDetail", { pageTitle: "회원 정보" });
+  res.render("userDetail", { pageTitle: "회원 정보", users });
 };
 
 export const changePassword = (req, res) => {

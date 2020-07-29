@@ -4,18 +4,16 @@ html
         <script src="https://kit.fontawesome.com/26bef48f89.js" crossorigin="anonymous"></script>
         title  #{pageTitle} | #{siteName}
     body
-            a(href=routes.home)
-                i.fas.fa-times
+        a(href=routes.home)
+            i.fas.fa-times
     main 
         .user
             .user_avatar
-                a(href=`/user${routes.userDetail}`)
-                    label(for="avatar") Avatar
+                //- a(href=`/user/${item.id}`)
+                label(for="avatar") Avatar
             .user_name
-                each item in users
-                    h5= item.nickname
+                h5 item.nickname
             .user_setting
                 a(href=`/user/edit-profile`)
                     button 프로필 변경
     include ./partials/footer
-

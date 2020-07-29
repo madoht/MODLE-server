@@ -5,11 +5,16 @@ header.header
                 i.fas.fa-home  MODLE
         .header_column 
             ul
-                li
-                    a(href=routes.join) 가입
-                li
-                    a(href=routes.login) 로그인
-        .header_column
-            a(href=routes.user)
-                i.fas.fa-bars
+                if !user.isAuthenticated
+                    li
+                        a(href=routes.join) 가입
+                    li
+                        a(href=routes.login) 로그인
+                else
+                    li
+                        .header_column
+                            a(href=routes.user(user.id))
+                                i.fas.fa-bars
+                    li
+                        a(href=routes.logout) 로그아웃
             

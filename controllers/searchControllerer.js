@@ -7,4 +7,6 @@ export const search = (req, res) => {
   res.render("search", { pageTitle: "검색 결과", searchingBy, home });
 };
 
-export const searchDetail = (req, res) => {};
+export const searchDetail = (req, res) => {
+  res.render("searchDetail", { home });
+};

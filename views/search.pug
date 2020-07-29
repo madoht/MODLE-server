@@ -1,10 +1,11 @@
 extends layouts/main
 
 block content
-    .search_header
+    .search-header
         h3 #{searchingBy} 관련 검색 결과
-    .search_results
+    .search-results
         each house in home
-            .search_result
-                h2= house.name
+            .search-result
+                a(href=`/search/${house.id}`)
+                    h2= house.name
                 p= house.place

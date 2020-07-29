@@ -2,7 +2,7 @@ extends layouts/main
 
 block content
     .form_container
-        form(action=routes.join, method="post")
+        form(action=routes.postJoin, method="post")
             input(type="text", name="name" placeholder="본명", required=true)
             input(type="text", name="nickname" placeholder="닉네임", required=true)
             input(type="email", name="email" placeholder="이메일", required=true)

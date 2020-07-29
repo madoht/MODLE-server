@@ -12,16 +12,34 @@ const CHANGE_PASSWORD = "/change-password";
 
 //Search Result
 const SEARCH = "/search";
-const SEARCH_DETAIL = "/:id";
+const SEARCH_DETAIL = "/search/:id";
 
 const routes = {
   home: HOME,
   join: JOIN,
   login: LOGIN,
   logout: LOGOUT,
-  user: USER,
-  userDetail: USER_DETAIL,
-  editProfile: EDIT_PROFILE,
+  user: (id) => {
+    if (id) {
+      return `/user/${id}`;
+    } else {
+      return USER;
+    }
+  },
+  userDetail: (id) => {
+    if (id) {
+      return `/user/${id}/userDetail`;
+    } else {
+      USER_DETAIL;
+    }
+  },
+  editProfile: (id) => {
+    if (id) {
+      return `/user/${id}/edit-profile`;
+    } else {
+      return EDIT_PROFILE;
+    }
+  },
   changePassword: CHANGE_PASSWORD,
   search: SEARCH,
   searchDetail: SEARCH_DETAIL,
