@@ -2,7 +2,7 @@ extends layouts/main
 
 block content
     .form-container
-        form(action=`/user${routes.editProfile}`, method="post")
+        form(action=routes.editProfile, method="post")
             label(for="avatar") Avatar
             input(type="file", id="avatar", name="avatar")
             input(type="text", id="Nick name", name="nick name", placeholder="변경할 닉네임을 입력하시오.")

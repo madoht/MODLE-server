@@ -23,7 +23,7 @@ globalRouter.post(routes.login, postLogin);
 
 globalRouter.get(routes.logout, logout);
 globalRouter.get(routes.search, search);
-globalRouter.get(routes.user, user);
+globalRouter.get(routes.user(), user);
 globalRouter.get(routes.searchDetail, searchDetail);
 
 export default globalRouter;
